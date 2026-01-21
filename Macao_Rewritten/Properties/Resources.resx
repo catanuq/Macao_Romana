@@ -226,6 +226,15 @@
   <data name="9_trifoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\9_trifoi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="alphys" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alphys.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="asgore" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\asgore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="asriel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\asriel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="as_inimaN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\as_inimaN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -239,7 +248,28 @@
     <value>..\Resources\as_trifoi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="carte_spate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\carte_spate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="click_sound_effect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\click_sound_effect.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="fereastra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fereastra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flowey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flowey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iesi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iesi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iesibuton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iesibuton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="joaca" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\joaca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="j_inimaN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\j_inimaN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -265,6 +295,36 @@
   <data name="k_trifoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\k_trifoi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="lose_sound_effect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lose_sound_effect.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="macao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\macao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="main_song" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\main_song.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="mana" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mettaton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mettaton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mute_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mute_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="noelle1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\noelle_normal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="noelle2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\noelle_darkworld.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="optiuni" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\optiuni.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="papyrus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\papyrus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="q_inimaN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\q_inimaN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -276,5 +336,38 @@
   </data>
   <data name="q_trifoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\q_trifoi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ralsei" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ralsei.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reguli" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reguli.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sans" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sans.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sound_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sound_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="startbuton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\startbuton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="startscreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\startscreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="susie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\susie_normal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="toriel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\toriel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="undyne" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\undyne.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="win_sound_effect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win_sound_effect.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

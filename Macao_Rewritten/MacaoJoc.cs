@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.Eventing.Reader;
-//using System.Linq;
+using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +10,8 @@ namespace Macao_Rewritten
 {
     public class MacaoJoc
     {
+        #region VARIABILE MEMBRU
+
         private string[] Numere = new string[13]
         {
             "2","3","4","5","6","7","8","9","10","as","j","q","k"
@@ -20,31 +22,33 @@ namespace Macao_Rewritten
         };
 
         private PachetCarti Pachet;
-        private List<Carte> ListaCarti;
-
-        private int indexCarti = 0;
-     
-
-        private int TuraCurenta;
-
-        private bool SeSareTura;
-
-        private Carte CarteDePeMasa;
-        private int CartiTrase;
-        private string SimbolCurent;
-
+        private List<Carte> ListaCarti, ListaCartiFolosite;
+        private Carte CarteDePeMasa = null;
         private Random random = new Random();
 
+        private int TuraCurenta;
+        private int CartiTrase;
 
-        //initializare pachet
+        private bool AInceputJoc = false;
+        private bool SeSareTura;
+
+        private string SimbolCurent;
+
+        //private int indicator = 0;
+        #endregion
+
+
+        #region METODE MEMBRU
+
+        #region constructor si metode initializare joc
         public MacaoJoc()
         {
             PachetCarti aux = new PachetCarti(new List<Carte>());
             ListaCarti = aux.IncarcareImagini(Numere, Simboluri);
+            ListaCartiFolosite = new List<Carte>();
             Pachet = new PachetCarti(ListaCarti);
             AmestecarePachet();
         }
-
 
         public void AmestecarePachet()
         {
@@ -61,7 +65,6 @@ namespace Macao_Rewritten
 
         public void StartJoc(Jucator Om, JucatorBot Robot)
         {
-
             for (int i = 0; i < 5; i++)
             {
                 Om.AdaugareCarte(TragereCarte());
@@ -69,51 +72,38 @@ namespace Macao_Rewritten
             }
             TuraCurenta = random.Next(0, 2);
         }
+        #endregion
 
-        public int GetTuraCurenta()
-        {
-            return TuraCurenta;
-        }
+        #region functii joc
 
-        public string GetSimbolRandom()
+        //metode de umflare sau tragere carte normala
+        public Carte TragereCarte() //folosita pentru cele doua tipuri de trageri (normala sau umflare)
         {
-            int simbol = random.Next(0, Simboluri.Length);
-            return Simboluri[simbol];
-        }
-        //functii joc - tragere/punere de carti, umfla cu 2/3, schimba semn, stai o tura
-
-        //pe parcursul jocului trebuie eliminate cartile din pachet, altfel avem dubluri
-        public int EliminareCarteDinPachet(Carte carte) //int pt a returna daca s-a terminat pachetul (1) sau nu (0)
-        {
-            if (indexCarti == ListaCarti.Count) return 1;
-            else
+            if (ListaCarti.Count == 0) //in cazul in care s-a epuizat pachetul
             {
-                ListaCarti.Remove(carte);
-                indexCarti++;
-                return 0;
-            }
-
-        }
-      
-        public Carte TragereCarte()
-        {
-            if (indexCarti >= ListaCarti.Count) //in cazul in care s-a epuizat pachetul
-            {
+                if (ListaCartiFolosite.Count == 0)
+                {
+                    return null;
+                }
+                foreach (Carte c in ListaCartiFolosite)
+                {
+                    ListaCarti.Add(c);
+                }
+                ListaCartiFolosite.Clear();
                 AmestecarePachet();
-                indexCarti = 0;         
             }
-            Carte carteTrasa = ListaCarti[indexCarti];
-            indexCarti++;
+
+            Carte carteTrasa = ListaCarti[0];
+            //Console.WriteLine(indicator+1+"."+carteTrasa.GetNumar() + " " + carteTrasa.GetSimbol());
+            //indicator++;
+            ListaCarti.RemoveAt(0);
             return carteTrasa;
         }
 
         public void TragereCarteNormala(object j)
         {
-            for (int i = 0; i < 1; i++)
-            {
-                ((Jucator)j).AdaugareCarte(TragereCarte());
 
-            }
+            ((Jucator)j).AdaugareCarte(TragereCarte());
         }
 
         public void TragereCarteUmflare(object j)
@@ -123,13 +113,36 @@ namespace Macao_Rewritten
                 ((Jucator)j).AdaugareCarte(TragereCarte());
             }
             CartiTrase = 0;
-
         }
 
-        //implementare polimorfism
+        //schimbare de tura si sfarsire tura
+        public void TrecereUrmatorul()
+        {
+            if (TuraCurenta == 0)
+            {
+                TuraCurenta = 1;
+            }
+            else
+            {
+                TuraCurenta = 0;
+            }
+        }
+        public void SfarsitTura()
+        {
+            TrecereUrmatorul();
+            if (SeSareTura == true)
+            {
+                SeSareTura = false;
+                TrecereUrmatorul();
+            }
+        }
+        #endregion
+
+        #region implementare polimorfism
+        //pentru verificarea tipului de carte si daca se poate juca
         public int CazCarte(Carte carte)
         {
-            return carte.ActiuneCarte();
+            return carte.ActiuneCarte(); //metoda virtuala din clasa Carte ce se regaseste in toate celelalte clase derivate
         }
 
         public void AflareCartePeMasa(Carte carte)
@@ -148,11 +161,13 @@ namespace Macao_Rewritten
                 {
                     if (CazCarte(carte) == 3) return true;
                     if (carte.GetSimbol() == SimbolCurent && carte.GetNumar() == "2") return true;
+                    if (carte.GetNumar() == "4" && carte.GetSimbol() == SimbolCurent) return true;
                 }
                 if (CarteDePeMasa.GetNumar() == "2")
                 {
                     if (CazCarte(carte) == 2) return true;
                     if (carte.GetSimbol() == SimbolCurent && carte.GetNumar() == "3") return true;
+                    if (carte.GetNumar() == "4" && carte.GetSimbol() == SimbolCurent) return true;
                 }
                 return false;
             }
@@ -170,11 +185,18 @@ namespace Macao_Rewritten
             {
                 case 2: CartiTrase += 2; break;
                 case 3: CartiTrase += 3; break;
+                case 4: CartiTrase = 0; break;
                 case 11: SeSareTura = true; break;
                 case 7: break; //simbolul se alege din UI
                 default: break;
-
             }
+        }
+        #endregion
+
+        #region get-eri si set-eri
+        public int GetTuraCurenta()
+        {
+            return TuraCurenta;
         }
 
         public int GetCartiTrase()
@@ -182,31 +204,45 @@ namespace Macao_Rewritten
             return CartiTrase;
         }
 
-        public void TrecereUrmatorul()
-        {
-            if (TuraCurenta == 0)
-            {
-                TuraCurenta = 1;
-            }
-            else
-            {
-                TuraCurenta = 0;
-            }
-        }
-
-        public void SfarsitTura()
-        {
-            TrecereUrmatorul();
-            if (SeSareTura == true)
-            {
-                SeSareTura = false;
-                TrecereUrmatorul();
-            }
-        }
-
         public void SetSimbolCurent(string simbol)
         {
             SimbolCurent = simbol;
         }
+
+        public string GetSimbolCurent()
+        {
+            return SimbolCurent;
+        }
+
+        public string GetSimbolRandom(List<Carte> carti) //pt bot, sa aleaga simbol pe care il are
+        {
+            if (carti.Count == 0)
+            {
+                return random.Next(0, Simboluri.Length).ToString();
+            }
+            else
+            {
+                List<string> simboluriRobot = new List<string>();
+                for (int i = 0; i < carti.Count; i++)
+                {
+                    simboluriRobot.Add(carti[i].GetSimbol());
+                }
+                int simbol = random.Next(0, simboluriRobot.Count);
+                return simboluriRobot[simbol];
+            }
+        }
+
+        public void SetListaCartiFolosite(Carte carte)
+        {
+            ListaCartiFolosite.Add(carte);
+        }
+
+        public List<Carte> GetListaCartiFolosite()
+        {
+            return ListaCartiFolosite;
+        }
+        #endregion
+        #endregion
     }
 }
+

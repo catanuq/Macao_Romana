@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{284BC75A-10D0-4200-B7C4-E4F50019E45E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Macao_Rewritten</RootNamespace>
+    <AssemblyName>Macao_Rewritten</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ferestre\Anunturi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ferestre\Anunturi.Designer.cs">
+      <DependentUpon>Anunturi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ferestre\CastigareJoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ferestre\CastigareJoc.Designer.cs">
+      <DependentUpon>CastigareJoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClaseCarti\Carte.cs" />
+    <Compile Include="ClaseCarti\CarteSchimbaSimbol.cs" />
+    <Compile Include="ClaseCarti\CarteStaiTura.cs" />
+    <Compile Include="ClaseCarti\CarteStopareUmflare.cs" />
+    <Compile Include="ClaseCarti\CarteUmflaDoi.cs" />
+    <Compile Include="ClaseCarti\CarteUmflaTrei.cs" />
+    <Compile Include="ClaseJucatori\Jucator.cs" />
+    <Compile Include="ClaseJucatori\JucatorBot.cs" />
+    <Compile Include="Ferestre\MacaoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ferestre\MacaoForm.Designer.cs">
+      <DependentUpon>MacaoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MacaoJoc.cs" />
+    <Compile Include="ClaseCarti\PachetCarti.cs" />
+    <Compile Include="Ferestre\PierdereJoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ferestre\PierdereJoc.Designer.cs">
+      <DependentUpon>PierdereJoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ferestre\PersonalizareJucator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ferestre\PersonalizareJucator.Designer.cs">
+      <DependentUpon>PersonalizareJucator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ferestre\StartMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ferestre\StartMenu.Designer.cs">
+      <DependentUpon>StartMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ferestre\Reguli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ferestre\Reguli.Designer.cs">
+      <DependentUpon>Reguli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ferestre\TipJoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ferestre\TipJoc.Designer.cs">
+      <DependentUpon>TipJoc.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Ferestre\Anunturi.resx">
+      <DependentUpon>Anunturi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ferestre\CastigareJoc.resx">
+      <DependentUpon>CastigareJoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ferestre\MacaoForm.resx">
+      <DependentUpon>MacaoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ferestre\PierdereJoc.resx">
+      <DependentUpon>PierdereJoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ferestre\PersonalizareJucator.resx">
+      <DependentUpon>PersonalizareJucator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ferestre\StartMenu.resx">
+      <DependentUpon>StartMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ferestre\Reguli.resx">
+      <DependentUpon>Reguli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ferestre\TipJoc.resx">
+      <DependentUpon>TipJoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_inimaN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_inimaR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_trifoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_inimaN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_inimaR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_trifoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_inimaN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_inimaR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_trifoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_inimaN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_inimaR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_trifoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_inimaN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_inimaR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_trifoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7_inimaN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7_inimaR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7_romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7_trifoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8_inimaN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8_inimaR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8_romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8_trifoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9_inimaN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9_inimaR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9_romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9_trifoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10_inimaN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10_inimaR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10_romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10_trifoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\as_inimaN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\as_inimaR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\as_romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\as_trifoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\j_inimaN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\j_inimaR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\j_romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\j_trifoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k_inimaN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k_inimaR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k_romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k_trifoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\q_inimaN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\q_inimaR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\q_romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\q_trifoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carte_spate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fereastra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iesi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\joaca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\macao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\startscreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\startbuton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iesibuton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win_sound_effect.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lose_sound_effect.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mute_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sound_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\click_sound_effect.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reguli.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main_song.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MediaPlayer">
+      <Guid>{22D6F304-B0F6-11D0-94AB-0080C74C7E95}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMLSS">
+      <Guid>{C21E9CE5-B317-463B-A1B1-B5E36EED59D0}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPDXMLib">
+      <Guid>{73F0DD5C-D071-46B6-A8BF-897C84EAAC49}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLauncher">
+      <Guid>{5CB42160-CD7C-4806-9367-1C4A65153F4A}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPNSSCDS">
+      <Guid>{73C381A8-548C-49F8-8AD3-C845D12D3C22}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPNSSCI">
+      <Guid>{453E9E02-8BA4-474C-BFA0-37727E44F6AE}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toriel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alphys.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papyrus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asgore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asriel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flowey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mettaton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ralsei.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undyne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\optiuni.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noelle_darkworld.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noelle_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\susie_normal.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
