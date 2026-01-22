@@ -46,28 +46,5 @@ namespace Macao_Rewritten.Properties {
                 this["NumeJucator"] = value;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool Sunet {
-            get {
-                return ((bool)(this["Sunet"]));
-            }
-            set {
-                this["Sunet"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Media.SoundPlayer MuzicaFundal {
-            get {
-                return ((global::System.Media.SoundPlayer)(this["MuzicaFundal"]));
-            }
-            set {
-                this["MuzicaFundal"] = value;
-            }
-        }
     }
 }

@@ -105,8 +105,6 @@ namespace Macao_Rewritten
                         }
                     }
                 }
-
-
             }
             return toateCartile;
         }

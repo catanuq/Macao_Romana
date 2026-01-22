@@ -8,11 +8,5 @@
     <Setting Name="NumeJucator" Type="System.String" Scope="User">
       <Value Profile="(Default)">Jucator</Value>
     </Setting>
-    <Setting Name="Sunet" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
-    </Setting>
-    <Setting Name="MuzicaFundal" Type="System.Media.SoundPlayer" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
   </Settings>
 </SettingsFile>

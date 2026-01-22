@@ -39,6 +39,7 @@
             this.btnAnulare = new System.Windows.Forms.Button();
             this.imgLstListaImagini = new System.Windows.Forms.ImageList(this.components);
             this.btnSunet = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lstPozeProfil
@@ -151,6 +152,19 @@
             this.btnSunet.UseVisualStyleBackColor = false;
             this.btnSunet.Click += new System.EventHandler(this.btnSunet_Click);
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(847, 243);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(201, 277);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Pentru a selecta imaginea, efectueaza dublu-click";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // PersonalizareJucator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -158,6 +172,7 @@
             this.BackgroundImage = global::Macao_Rewritten.Properties.Resources.fereastra;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1082, 753);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSunet);
             this.Controls.Add(this.btnAnulare);
             this.Controls.Add(this.btnOk);
@@ -186,5 +201,6 @@
         private System.Windows.Forms.Button btnAnulare;
         private System.Windows.Forms.ImageList imgLstListaImagini;
         private System.Windows.Forms.Button btnSunet;
+        private System.Windows.Forms.Label label1;
     }
 }

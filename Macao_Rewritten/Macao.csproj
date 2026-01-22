@@ -316,9 +316,6 @@
     <None Include="Resources\fereastra.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\iesi.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\joaca.png" />
   </ItemGroup>
   <ItemGroup>
@@ -338,9 +335,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\startbuton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iesibuton.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\win_sound_effect.wav" />
@@ -478,6 +472,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\susie_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iesi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iesibuton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,7 +9,5 @@ namespace Macao_Rewritten
     public class JucatorBot : Jucator
     {
         public JucatorBot(List<Carte> carti) : base(carti) { }
-
-
     }
 }
